@@ -1,0 +1,40 @@
+.roheline{
+	color: green;
+}
+
+.joonitud{
+	text-decoration:underline;
+}
+
+#tuhmroheline {
+	background-color:#BACDAE;
+}
+
+.suurkiri{
+	font-size: 200%;
+}
+
+#mono{
+	font-family: monospace;
+}
+
+.mustkollane {
+	background-color:yellow;
+	border-width:3 px;
+	border-color:black;
+	border-style:solid;
+}
+
+.katkendlik{
+	border:2px dashed black;
+	border-radius:5 px;
+}
+
+.kaldkiri{
+	font-style:italic;
+	text-align:center;
+}
+
+.crosshair{
+	cursor:crosshair;
+}

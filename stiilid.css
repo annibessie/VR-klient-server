@@ -1,0 +1,65 @@
+.uuspilt img{
+	width:50%;
+	height:auto;
+}
+
+h1{
+	color:#045FB4;
+}
+
+h2{
+	width: 180px;
+	text-align:center;
+	border:2px solid #045FB4;
+}
+
+.kaldkiri{
+	background-color: #F7819F;
+}
+
+.link:hover{
+	cursor:wait;
+	background-color:yellow;
+}
+
+.blokk1{
+	border:3px dashed #045FB4;
+	border-radius:5 px;
+	width: 400px;
+	list-style-type:square;
+}
+
+#lause:hover{
+	border-bottom:2px solid #F7819F;
+	cursor:grab;
+}
+
+h3{
+	font-weight:300;
+}
+
+h4{
+	color:#045FB4;
+}
+
+h5{
+	color:#F7819F;
+}
+
+.blokk2{
+	border:3px solid #F7819F;
+	border-radius:5 px;
+	width: 400px;
+}
+
+h6{
+	font-size:150%;
+	color:grey;
+	font-family: monospace;
+}
+
+.luuletus{
+	color:grey;
+	font-style:italic;
+	font-family:serif;
+}
