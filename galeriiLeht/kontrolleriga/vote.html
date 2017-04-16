@@ -1,5 +1,5 @@
 <h3>Vali oma lemmik :)</h3>
-	<form action="tulemus.html" method="GET">
+	<form action="?mode=tulemus" method="POST">
 				
 	<?php $pildid=array (
 			"pildid/nameless1.jpg",
@@ -12,7 +12,7 @@
 		<?php foreach ($pildid as $id => $pilt): ?>
 		<p>
 			<label for ="<?php echo $id+1; ?>">
-				<img src="<?php echo $pilt; ?>" alt="<?php echo $id+1; ?>" height="100" />
+				<img src="<?php echo $pilt;?>" alt="<?php echo $id+1; ?>" height="100" />
 			</label>
 			<input type="radio" value="<?php echo $id+1; ?>" name="pilt"/>
 		</p>

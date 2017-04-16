@@ -1,0 +1,7 @@
+<h3>Valiku tulemus</h3>
+
+<?php if (empty($_POST)) {
+		echo "Oops, Sul jäi valik tegemata! Proovi uuesti. :)";
+} else {
+	echo "Valisid pildi nr " . $_POST["pilt"].". Suur tänu hääletamast!";
+}?>
