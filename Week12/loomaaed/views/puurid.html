@@ -1,0 +1,16 @@
+<?php 
+	foreach($puurid as $puurinr => $loomad):
+?>
+
+<div>
+	<h3> Puur <?php echo $puurinr;?><h3>
+	<?php foreach ($loomad as $loomarida):
+?>
+		
+<img src="<?php echo $loomarida['liik'];?>" alt="<?php echo $loomarida['liik'];?>"
+		<?php endforeach; ?>
+</div>
+		
+<?php endforeach; ?>
+
+		
