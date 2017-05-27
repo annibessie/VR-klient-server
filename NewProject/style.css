@@ -1,0 +1,79 @@
+body {
+	margin: 0px;
+}
+
+#menu{
+	width: 600px;
+	margin:auto;
+}
+
+#menu ul{
+	list-style: none;
+	margin:20px;
+	padding:0px;
+
+}
+#menu li {
+	display: inline-block;
+	
+}
+#menu a {
+	display: inline-block;
+	padding:5px 15px;
+	color: black;
+	text-decoration: none;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+
+}
+#menu a:hover, #menu li:hover {
+	background: #F7F8E0;
+	color:red;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+#banner, #validator {
+background: #F7F8E0;
+text-align:center;
+border-width: 5px 0px;
+border-style:solid;
+border-color:#F7F5A9;
+
+}
+#banner img{vertical-align: center; width: 600px;}
+
+#gallery img, form p  {
+	border: solid #dec 3px;
+	padding:5px;
+}
+
+#validator {margin-top:100px;}
+form label {display: block;}
+form p { 
+	margin: 5px auto;
+	display: inline-block;
+	text-align: center;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+h4, p {
+	text-align: center;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+#login, #add, #register{
+	margin:auto;
+	width: 35%;	
+	margin-top:50%;
+	display: inline-block;
+	text-align:left;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+#content {
+	padding:10px;
+}
+
+#about, #add, #login, #register {
+	width: 600px;
+	margin:auto;
+}
