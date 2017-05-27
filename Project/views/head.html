@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title> SPAID Shar Pei</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="menu">
+				<li><a href="?page=main">Main page</a></li>
+				<li><a href="?page=about">About</a></li>
+				<?php if (!empty($_SESSION['user'])):?>
+				<li><a href="?page=add">Add your dog's result</a></li>
+				<li><a href="?page=results">Browse results</a></li>
+				<li><a href="?page=logout">Logout</a></li>
+				<?php else: ?>
+				<li><a href="?page=register">Register</a></li>
+				<li><a href="?page=login">Login</a></li>
+				<?php endif; ?>
+			</div>
+		<div id="content">
+				
+				
+				
