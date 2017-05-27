@@ -1,0 +1,38 @@
+<?php
+if (!isset($_SESSION["user"])) {
+    header("Location: ?page=login");
+} ?>
+<table id="results" class="tabel">
+    <caption>Results</caption>
+    <tr>
+        <th>Dog's name</th>
+        <th>Owner's name</th>
+        <th>Test result</th>
+        <th>Country</th>
+        <th>Comment</th>
+    <tr>
+        <tbody>
+        <?php if (!empty($results)): ?>
+        <?php foreach ($results as $result): ?>
+        <tr>
+            <td>
+                <?= htmlspecialchars($result['dogname']); ?>
+            </td>
+            <td>
+                <?= htmlspecialchars($result['owner']); ?>
+            </td>
+            <td>
+                 <?= htmlspecialchars($result['result']); ?>
+            </td>
+            <td>
+                 <?= htmlspecialchars($result['country']); ?>
+            </td>
+            <td>
+                <?= htmlspecialchars($result['comment']); ?>
+            </td>
+            <td>
+        </tr>
+        <?php endforeach; ?>
+        <?php endif; ?>
+        </tbody>
+</table>

@@ -140,4 +140,18 @@ function add(){
 
 }
 
+function results() {
+    global $connection;
+    $sql = "SELECT
+       	akitt_spaid.dogname,
+		akitt_spaid.owner,
+		akitt_spaid.result,
+		akitt_spaid.country,
+		akitt_spaid.comment,
+        FROM `akitt_spaid`";
+    $dogname = mysqli_query($connection, $sql) or die ($sql . " - " . mysqli_error($connection));
+         
+    include_once('views/results.html');
+}
+
 ?>

@@ -24,7 +24,7 @@ switch($page){
 		add();
 		break;
 	case('results');
-		show_results();
+		results();
 		break;
 	case('about'):
 		about();
