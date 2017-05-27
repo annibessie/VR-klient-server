@@ -6,20 +6,23 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
-		<div id="wrap">
-			<div id="menu">
+		<div id="menu">
+				<ul>
 				<li><a href="?page=main">Main page</a></li>
 				<li><a href="?page=about">About</a></li>
-				<?php if (!empty($_SESSION['user'])):?>
 				<li><a href="?page=add">Add your dog's result</a></li>
+				<?php if (!empty($_SESSION['user'])):?>
 				<li><a href="?page=results">Browse results</a></li>
 				<li><a href="?page=logout">Logout</a></li>
 				<?php else: ?>
 				<li><a href="?page=register">Register</a></li>
 				<li><a href="?page=login">Login</a></li>
+				</ul>
 				<?php endif; ?>
-			</div>
-		<div id="content">
+		</div>
 				
-				
-				
+<div id="banner">
+	<img src="sharpei.jpg" alt="banner">
+</div>
+
+<div id="wrap">

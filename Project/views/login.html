@@ -1,15 +1,18 @@
+
+<?php
+    if (isset($errors)):
+        foreach($errors as $error): ?>
+            <p class="error"><?php echo $error; ?> </p>
+<?php endforeach;
+endif; ?>
+
 <div id="login">
 	<form action="?page=login" method="POST">
-		<input type="text" name="user" placeholder="kasutaja"/><br/>
-		<input type="password" name="pass" placeholder="parool"/><br/>
+		Username:<br>
+		<input type="text" name="user" placeholder="username"/><br/>
+		
+		Password:<br>
+		<input type="password" name="pass" placeholder="password"/><br/>
+		
 		<input type="submit" value="Login!"/>
 	</form>
-	
-<?php if (isset($errors)):?>
-	<?php foreach($errors as $error):?>
-		<div style="color:red;"><?php echo htmlspecialchars($error);
-	<?php endforeach;?>
-<?php endif;?>
-
-	
-	

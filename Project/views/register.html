@@ -1,8 +1,6 @@
-<?php if (isset($errors)):?>
-	<?php foreach($errors as $error):?>
-			<div style="color:red;"><?php echo htmlspecialchars($error);
-	<?php endforeach;?>
-<?php endif;?>
+<?php if (isset($error)): ?>
+     <p class="error"><?php echo $error; ?> </p>
+<?php endif ?>
 					
 <form id="register" action="?page=register" method="POST">
 	
@@ -12,7 +10,7 @@
 	Password:* <br>
 	<input type="password" name="pass"><br/>
 	
-	Password again:*
+	Password again:*<br>
 	<input type="password" name="pass2" onblur="validatePassword()">
 	<span id="wrongpass" class="error"></span><br/>
 	

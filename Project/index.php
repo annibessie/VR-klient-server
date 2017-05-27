@@ -21,7 +21,7 @@ switch($page){
 		logout();
 		break;
 	case('add'):
-		add_data();
+		add();
 		break;
 	case('results');
 		show_results();
