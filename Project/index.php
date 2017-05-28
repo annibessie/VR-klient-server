@@ -29,6 +29,9 @@ switch($page){
 	case('about'):
 		about();
 		break;
+	case('logout');
+		logout();
+		break;
 	default:
 		main();
 		break;

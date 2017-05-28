@@ -58,37 +58,28 @@ function register(){
 
 function login(){
     global $connection;
-    $errors = array();
-    if (isset($_SESSION['user'])) {
-        header("Location: ?page=add");
+    if (isset($_SESSION['user'])){
+        header("Location: ?page=about");
     }
-    if ($_SERVER['REQUEST_METHOD'] == "POST") {
-        if (isset($_POST['user']) && isset($_POST['pass'])) {
-            if ($_POST['user'] == "" && $_POST['pass'] == "") {
-                $errors[] = "Enter username and password";
-            }
-            if ($_POST['user'] == "") {
-                $errors[] = "Enter username";
-            }
-            if ($_POST['pass'] == "") {
-                $errors[] = "Enter password";
-            }else {
-                global $connection;
-                $user = mysqli_real_escape_string($connection,htmlspecialchars($_POST['user']));
-                $pass = mysqli_real_escape_string($connection,htmlspecialchars($_POST['pass']));
-                $sql = "SELECT * FROM akitt_users WHERE user='$user' AND pass=SHA1('$pass')";
-                $result = mysqli_query($connection, $sql) or die("Error");
-                if (mysqli_num_rows($result) > 0) {
-                    $row = mysqli_fetch_assoc($result);
-                    $_SESSION['user'] = $user;
-                    header("Location: ?page=main");
-                } else {
-                    $errors[] = "Username or password wrong";
-                }
+    if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+        if (empty($_POST['user'])){
+            $errors[] = "Please enter username";
+        } else if (empty($_POST['pass'])){
+            $errors[] = "Please enter password";
+        } else {
+            $user = mysqli_real_escape_string($connection, $_POST['user']);
+            $pass = mysqli_real_escape_string($connection, $_POST['pass']);
+            $sql = "SELECT * FROM akitt_users WHERE user = '$user' AND pass= SHA1('$pass')";
+            $result = mysqli_query($connection, $sql) or die("$sql - ".mysqli_error($connection));
+            if (mysqli_num_rows($result)>0){
+                $_SESSION['user'] = $user;
+                header("Location: ?page=about");
+            } else {
+                $errors[] = "Wrong username or password";
             }
         }
     }
-    include_once('views/login.html');
+	include_once('views/login.html');
 }
 
 
@@ -147,8 +138,7 @@ function results() {
 		$result=mysqli_query($connection, $query) or die ("$query - ".mysqli_error($connection));
 while ($row = mysqli_fetch_assoc($result)){
 	$spaidresult[] = $row;
-	//echo "Dog name: {$row['dogname']}, {$row['owner']}, {$row['result']}, {$row['country']}, {$row['comment']}<br/>";
-	//use the variable $row
+
 }
 	
 	
