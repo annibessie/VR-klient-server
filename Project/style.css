@@ -31,7 +31,7 @@ body {
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
-#banner, #validator {
+#banner, #validator, #res, #add {
 background: #F7F8E0;
 text-align:center;
 border-width: 5px 0px;
@@ -60,7 +60,7 @@ h4, p {
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
-#login, #add, #register{
+#login, #register {
 	margin:auto;
 	width: 35%;	
 	margin-top:50%;
@@ -73,7 +73,7 @@ h4, p {
 	padding:10px;
 }
 
-#about, #add, #login, #register {
+#about, #add, #login, #register, #res{
 	width: 600px;
-	margin:auto;
+	margin: auto;
 }

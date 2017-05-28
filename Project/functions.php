@@ -142,16 +142,17 @@ function add(){
 
 function results() {
     global $connection;
-    $sql = "SELECT
-       	akitt_spaid.dogname,
-		akitt_spaid.owner,
-		akitt_spaid.result,
-		akitt_spaid.country,
-		akitt_spaid.comment,
-        FROM `akitt_spaid`";
-    $dogname = mysqli_query($connection, $sql) or die ($sql . " - " . mysqli_error($connection));
-         
-    include_once('views/results.html');
+		$spaidresult=array(); // Tühi massiiv
+		$query= "SELECT id, dogname, owner, result, country, comment FROM akitt_spaid"; // Selekteerib andmebaasist võistluse kuvamiseks vajalikud andmed.
+		$result=mysqli_query($connection, $query) or die ("$query - ".mysqli_error($connection));
+while ($row = mysqli_fetch_assoc($result)){
+	$spaidresult[] = $row;
+	//echo "Dog name: {$row['dogname']}, {$row['owner']}, {$row['result']}, {$row['country']}, {$row['comment']}<br/>";
+	//use the variable $row
 }
+	
+	
+	include_once("views/results.html");
+	}
 
 ?>

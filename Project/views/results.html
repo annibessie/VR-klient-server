@@ -1,9 +1,9 @@
-<?php
-if (!isset($_SESSION["user"])) {
-    header("Location: ?page=login");
-} ?>
-<table id="results" class="tabel">
-    <caption>Results</caption>
+<?php if (isset($error)): ?>
+     <p class="error"><?php echo $error; ?> </p>
+<?php endif ?>
+
+<table id="res" class="tabel">
+    <h3><caption>Results</caption><h3>
     <tr>
         <th>Dog's name</th>
         <th>Owner's name</th>
@@ -12,23 +12,23 @@ if (!isset($_SESSION["user"])) {
         <th>Comment</th>
     <tr>
         <tbody>
-        <?php if (!empty($results)): ?>
-        <?php foreach ($results as $result): ?>
+        <?php if (!empty($spaidresult)): ?>
+        <?php foreach ($spaidresult as $id=> $spaidres): ?>
         <tr>
             <td>
-                <?= htmlspecialchars($result['dogname']); ?>
+                <?php echo $spaidres['dogname']; ?>
             </td>
             <td>
-                <?= htmlspecialchars($result['owner']); ?>
+                <?php echo $spaidres['owner']; ?>
             </td>
             <td>
-                 <?= htmlspecialchars($result['result']); ?>
+                 <?php echo $spaidres['result']; ?>
             </td>
             <td>
-                 <?= htmlspecialchars($result['country']); ?>
+                 <?php echo $spaidres['country']; ?>
             </td>
             <td>
-                <?= htmlspecialchars($result['comment']); ?>
+                <?php echo $spaidres['comment']; ?>
             </td>
             <td>
         </tr>
