@@ -2,7 +2,7 @@
      <p class="error"><?php echo $error; ?> </p>
 <?php endif ?>
 
-<table id="res" class="tabel">
+<table id="res" class="table">
     <h3><caption>Results</caption><h3>
     <tr>
         <th>Dog's name</th>
@@ -11,6 +11,7 @@
         <th>Country</th>
         <th>Comment</th>
     <tr>
+
         <tbody>
         <?php if (!empty($spaidresult)): ?>
         <?php foreach ($spaidresult as $id=> $spaidres): ?>
@@ -35,4 +36,4 @@
         <?php endforeach; ?>
         <?php endif; ?>
         </tbody>
-</table>
+		</table>

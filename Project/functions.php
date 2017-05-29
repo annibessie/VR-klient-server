@@ -102,11 +102,6 @@ function add(){
         } else {
             $owner = (mysqli_real_escape_string($connection, $_POST['owner']));
         }
-        if (empty($_POST['gender'])){
-            $errors[] = "Please enter dog's gender";
-        } else {
-            $gender = mysqli_real_escape_string($connection, $_POST['gender']);
-        }   
 		if (empty($_POST['result'])){
             $errors[] = "Please enter dog's SPAID test result";
         } else {
@@ -123,7 +118,7 @@ function add(){
             $comment = "";
 		}
         if (!isset($errors)){
-            $sql = "INSERT INTO akitt_spaid (dogname, owner, gender, result, country, comment) VALUES ('$dogname', '$owner', '$gender', '$result', '$country', '$comment')";
+            $sql = "INSERT INTO akitt_spaid (dogname, owner, result, country, comment) VALUES ('$dogname', '$owner', '$result', '$country', '$comment')";
             mysqli_query($connection, $sql) or die ($sql . " - " . mysqli_error($connection));
         }
     }
@@ -133,8 +128,8 @@ function add(){
 
 function results() {
     global $connection;
-		$spaidresult=array(); // Tühi massiiv
-		$query= "SELECT id, dogname, owner, result, country, comment FROM akitt_spaid"; // Selekteerib andmebaasist võistluse kuvamiseks vajalikud andmed.
+		$spaidresult=array(); 
+		$query= "SELECT id, dogname, owner, result, country, comment FROM akitt_spaid";
 		$result=mysqli_query($connection, $query) or die ("$query - ".mysqli_error($connection));
 while ($row = mysqli_fetch_assoc($result)){
 	$spaidresult[] = $row;
