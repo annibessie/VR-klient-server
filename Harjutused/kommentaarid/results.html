@@ -1,0 +1,19 @@
+<?php if (isset($error)): ?>
+     <p class="error"><?php echo $error; ?> </p>
+<?php endif ?>
+
+<table id="res" class="table">
+    <h3>Results<h3>
+    <tr><th>Comments</th></tr>
+		<tbody>
+		<?php if (!empty($commentsresult)): ?>
+        <?php foreach ($commentsresult as $id=> $commentsres): ?>
+			
+        <tr><td><?php echo $commentsres['comment']; ?></td></tr>
+		<?php endforeach;?>
+		<?php endif;?>
+		</tbody>
+		</table>
+		
+		
+			
