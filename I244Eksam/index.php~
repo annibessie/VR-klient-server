@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Valuutakalkulaator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<form id="raha">
+<p>Mis väärtuses soovid raha vahetada?</p>
+<input type="number" name="rahasumma" required>
+</form>
+</body>
+
+
+</html>
